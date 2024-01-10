@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main main main"
+    "footer footer footer";
+  grid-template-rows: auto auto 4fr auto;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1rem;
+  justify-content: center;
+  background-color: #f8f4ec;
+}
+
+/* Center the logo */
+header img {
+  margin-left: 23rem;
+  margin-top: 1rem;
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+  height: 3rem;
+  background-color: #495e57;
+  border-radius: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  margin: 0.7rem;
+  display: inline-block;
+  font-size: 1.3rem;
+}
+
+li a {
+  color: #f4ce14;
+  text-decoration: none;
+}
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "banner banner banner"
+    "section1 section2 section3";
+  grid-auto-columns: repeat(3, 30%);
+  grid-auto-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.banner {
+  grid-area: banner;
+  background: url(https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg)
+    no-repeat 50% 50%;
+  background-size: cover;
+  border-radius: 1rem;
+  color: black;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.banner > article {
+  font-size: 2rem;
+}
+.banner h1 {
+  margin: 1.5rem;
+}
+
+.banner p {
+  margin: 2rem;
+}
+.text,
+article ul {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+nav,
+.copyright {
+  font-family: "Salsa", cursive;
+}
+
+.section1 {
+  grid-area: section1;
+  background-color: #495e57;
+  color: #f4ce14;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.section2 {
+  grid-area: section2;
+  background-color: #495e57;
+  color: #f4ce14;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.section3 {
+  grid-area: section3;
+  background-color: #495e57;
+  color: #f4ce14;
+  border-radius: 1rem;
+  text-align: center;
+}
+section h2 {
+  margin: 0.5rem;
+}
+
+section img {
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+.section1 .text,
+.section2 .text,
+.section3 .text {
+  width: 18rem;
+  margin-left: 3rem;
+}
+article ul {
+  list-style: none;
+}
+p a {
+  color: #f4ce14;
+}
+footer {
+  display: grid;
+  grid-template-areas: "logo copyright";
+  grid-area: footer;
+  border-top: solid #495e57 0.1rem;
+}
+
+.f-logo {
+  grid-area: logo;
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  grid-area: copyright;
+  margin-top: 2rem;
+  text-align: end;
+  color: #495e57;
+}
+
+nav a:hover {
+  background-color: #f4ce14;
+  color: #495e57;
+  padding: 0.5rem;
+  transition: 0.3s;
+}
